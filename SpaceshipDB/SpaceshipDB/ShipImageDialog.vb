@@ -12,7 +12,7 @@ Public Class ShipImageDialog
         Me.Close()
     End Sub
 
-    Private Sub ShipImagesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles ShipImagesBindingNavigatorSaveItem.Click
+    Private Sub ShipImagesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.ShipImagesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)
@@ -20,6 +20,8 @@ Public Class ShipImageDialog
     End Sub
 
     Private Sub ShipImageDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpaceshipDataSet.ShipImages' table. You can move, or remove it, as needed.
+        Me.ShipImagesTableAdapter.Fill(Me.SpaceshipDataSet.ShipImages)
         'TODO: This line of code loads data into the 'SpaceshipDataSet.ShipImages' table. You can move, or remove it, as needed.
         Me.ShipImagesTableAdapter.Fill(Me.SpaceshipDataSet.ShipImages)
 
@@ -35,5 +37,12 @@ Public Class ShipImageDialog
 
     Private Sub bRemoveImage_Click(sender As Object, e As EventArgs) Handles bRemoveImage.Click
         ImagePictureBox.Image = Nothing
+    End Sub
+
+    Private Sub ShipImagesBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs) Handles ShipImagesBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.ShipImagesBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)
+
     End Sub
 End Class

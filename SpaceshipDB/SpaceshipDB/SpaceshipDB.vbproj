@@ -121,12 +121,6 @@
     <Compile Include="ShipDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShipForm.Designer.vb">
-      <DependentUpon>ShipForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ShipForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ShipImageDialog.Designer.vb">
       <DependentUpon>ShipImageDialog.vb</DependentUpon>
     </Compile>
@@ -166,9 +160,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShipDialog.resx">
       <DependentUpon>ShipDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShipForm.resx">
-      <DependentUpon>ShipForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShipImageDialog.resx">
       <DependentUpon>ShipImageDialog.vb</DependentUpon>
