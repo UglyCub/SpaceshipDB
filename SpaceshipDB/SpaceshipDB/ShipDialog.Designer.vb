@@ -24,22 +24,15 @@ Partial Class ShipDialog
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ShipIDLabel As System.Windows.Forms.Label
-        Dim NameLabel As System.Windows.Forms.Label
-        Dim DescriptionLabel As System.Windows.Forms.Label
-        Dim ClassIDLabel As System.Windows.Forms.Label
-        Dim ShowIDLabel As System.Windows.Forms.Label
-        Dim ImageIDLabel As System.Windows.Forms.Label
+        Dim ShipNameLabel As System.Windows.Forms.Label
+        Dim ShipDescriptionLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ShipDialog))
+        Dim ImageIDLabel As System.Windows.Forms.Label
+        Dim ShowIDLabel As System.Windows.Forms.Label
+        Dim ClassIDLabel As System.Windows.Forms.Label
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
-        Me.SpaceshipDataSet = New SpaceshipDB.SpaceshipDataSet()
-        Me.ShipsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ShipsTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShipsTableAdapter()
-        Me.TableAdapterManager = New SpaceshipDB.SpaceshipDataSetTableAdapters.TableAdapterManager()
-        Me.ClassesTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ClassesTableAdapter()
-        Me.ShipImagesTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShipImagesTableAdapter()
-        Me.ShowsTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShowsTableAdapter()
         Me.ShipsBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -54,83 +47,63 @@ Partial Class ShipDialog
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ShipsBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ShipIDTextBox = New System.Windows.Forms.TextBox()
-        Me.NameTextBox = New System.Windows.Forms.TextBox()
-        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
-        Me.ClassIDComboBox = New System.Windows.Forms.ComboBox()
-        Me.ClassesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ShowIDComboBox = New System.Windows.Forms.ComboBox()
-        Me.ShowsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ShipNameTextBox = New System.Windows.Forms.TextBox()
+        Me.ShipDescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.ShipsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SpaceshipDataSet = New SpaceshipDB.SpaceshipDataSet()
+        Me.ShipsTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShipsTableAdapter()
+        Me.TableAdapterManager = New SpaceshipDB.SpaceshipDataSetTableAdapters.TableAdapterManager()
         Me.ImageIDComboBox = New System.Windows.Forms.ComboBox()
         Me.ShipImagesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ShipImagesTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShipImagesTableAdapter()
+        Me.ShowIDComboBox = New System.Windows.Forms.ComboBox()
+        Me.ShowsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ShowsTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShowsTableAdapter()
+        Me.ClassIDComboBox = New System.Windows.Forms.ComboBox()
+        Me.ClassesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClassesTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ClassesTableAdapter()
         ShipIDLabel = New System.Windows.Forms.Label()
-        NameLabel = New System.Windows.Forms.Label()
-        DescriptionLabel = New System.Windows.Forms.Label()
-        ClassIDLabel = New System.Windows.Forms.Label()
-        ShowIDLabel = New System.Windows.Forms.Label()
+        ShipNameLabel = New System.Windows.Forms.Label()
+        ShipDescriptionLabel = New System.Windows.Forms.Label()
         ImageIDLabel = New System.Windows.Forms.Label()
+        ShowIDLabel = New System.Windows.Forms.Label()
+        ClassIDLabel = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.SpaceshipDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ShipsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShipsBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ShipsBindingNavigator.SuspendLayout()
-        CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ShowsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShipsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpaceshipDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShipImagesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShowsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ShipIDLabel
         '
         ShipIDLabel.AutoSize = True
-        ShipIDLabel.Location = New System.Drawing.Point(103, 73)
+        ShipIDLabel.Location = New System.Drawing.Point(31, 46)
         ShipIDLabel.Name = "ShipIDLabel"
         ShipIDLabel.Size = New System.Drawing.Size(45, 13)
         ShipIDLabel.TabIndex = 2
         ShipIDLabel.Text = "Ship ID:"
         '
-        'NameLabel
+        'ShipNameLabel
         '
-        NameLabel.AutoSize = True
-        NameLabel.Location = New System.Drawing.Point(103, 99)
-        NameLabel.Name = "NameLabel"
-        NameLabel.Size = New System.Drawing.Size(38, 13)
-        NameLabel.TabIndex = 4
-        NameLabel.Text = "Name:"
+        ShipNameLabel.AutoSize = True
+        ShipNameLabel.Location = New System.Drawing.Point(31, 72)
+        ShipNameLabel.Name = "ShipNameLabel"
+        ShipNameLabel.Size = New System.Drawing.Size(62, 13)
+        ShipNameLabel.TabIndex = 4
+        ShipNameLabel.Text = "Ship Name:"
         '
-        'DescriptionLabel
+        'ShipDescriptionLabel
         '
-        DescriptionLabel.AutoSize = True
-        DescriptionLabel.Location = New System.Drawing.Point(103, 125)
-        DescriptionLabel.Name = "DescriptionLabel"
-        DescriptionLabel.Size = New System.Drawing.Size(63, 13)
-        DescriptionLabel.TabIndex = 6
-        DescriptionLabel.Text = "Description:"
-        '
-        'ClassIDLabel
-        '
-        ClassIDLabel.AutoSize = True
-        ClassIDLabel.Location = New System.Drawing.Point(103, 151)
-        ClassIDLabel.Name = "ClassIDLabel"
-        ClassIDLabel.Size = New System.Drawing.Size(49, 13)
-        ClassIDLabel.TabIndex = 8
-        ClassIDLabel.Text = "Class ID:"
-        '
-        'ShowIDLabel
-        '
-        ShowIDLabel.AutoSize = True
-        ShowIDLabel.Location = New System.Drawing.Point(103, 178)
-        ShowIDLabel.Name = "ShowIDLabel"
-        ShowIDLabel.Size = New System.Drawing.Size(51, 13)
-        ShowIDLabel.TabIndex = 10
-        ShowIDLabel.Text = "Show ID:"
-        '
-        'ImageIDLabel
-        '
-        ImageIDLabel.AutoSize = True
-        ImageIDLabel.Location = New System.Drawing.Point(103, 205)
-        ImageIDLabel.Name = "ImageIDLabel"
-        ImageIDLabel.Size = New System.Drawing.Size(53, 13)
-        ImageIDLabel.TabIndex = 12
-        ImageIDLabel.Text = "Image ID:"
+        ShipDescriptionLabel.AutoSize = True
+        ShipDescriptionLabel.Location = New System.Drawing.Point(31, 98)
+        ShipDescriptionLabel.Name = "ShipDescriptionLabel"
+        ShipDescriptionLabel.Size = New System.Drawing.Size(87, 13)
+        ShipDescriptionLabel.TabIndex = 6
+        ShipDescriptionLabel.Text = "Ship Description:"
         '
         'TableLayoutPanel1
         '
@@ -140,7 +113,7 @@ Partial Class ShipDialog
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(210, 301)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(326, 208)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -166,41 +139,6 @@ Partial Class ShipDialog
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancel"
         '
-        'SpaceshipDataSet
-        '
-        Me.SpaceshipDataSet.DataSetName = "SpaceshipDataSet"
-        Me.SpaceshipDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ShipsBindingSource
-        '
-        Me.ShipsBindingSource.DataMember = "Ships"
-        Me.ShipsBindingSource.DataSource = Me.SpaceshipDataSet
-        '
-        'ShipsTableAdapter
-        '
-        Me.ShipsTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.ClassesTableAdapter = Me.ClassesTableAdapter
-        Me.TableAdapterManager.ShipImagesTableAdapter = Me.ShipImagesTableAdapter
-        Me.TableAdapterManager.ShipsTableAdapter = Me.ShipsTableAdapter
-        Me.TableAdapterManager.ShowsTableAdapter = Me.ShowsTableAdapter
-        Me.TableAdapterManager.UpdateOrder = SpaceshipDB.SpaceshipDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'ClassesTableAdapter
-        '
-        Me.ClassesTableAdapter.ClearBeforeFill = True
-        '
-        'ShipImagesTableAdapter
-        '
-        Me.ShipImagesTableAdapter.ClearBeforeFill = True
-        '
-        'ShowsTableAdapter
-        '
-        Me.ShowsTableAdapter.ClearBeforeFill = True
-        '
         'ShipsBindingNavigator
         '
         Me.ShipsBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -215,7 +153,7 @@ Partial Class ShipDialog
         Me.ShipsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ShipsBindingNavigator.Name = "ShipsBindingNavigator"
         Me.ShipsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ShipsBindingNavigator.Size = New System.Drawing.Size(368, 25)
+        Me.ShipsBindingNavigator.Size = New System.Drawing.Size(484, 25)
         Me.ShipsBindingNavigator.TabIndex = 1
         Me.ShipsBindingNavigator.Text = "BindingNavigator1"
         '
@@ -315,60 +253,60 @@ Partial Class ShipDialog
         'ShipIDTextBox
         '
         Me.ShipIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipsBindingSource, "ShipID", True))
-        Me.ShipIDTextBox.Location = New System.Drawing.Point(172, 70)
+        Me.ShipIDTextBox.Location = New System.Drawing.Point(124, 43)
         Me.ShipIDTextBox.Name = "ShipIDTextBox"
-        Me.ShipIDTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.ShipIDTextBox.ReadOnly = True
+        Me.ShipIDTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ShipIDTextBox.TabIndex = 3
         '
-        'NameTextBox
+        'ShipNameTextBox
         '
-        Me.NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipsBindingSource, "Name", True))
-        Me.NameTextBox.Location = New System.Drawing.Point(172, 96)
-        Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.NameTextBox.TabIndex = 5
+        Me.ShipNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipsBindingSource, "ShipName", True))
+        Me.ShipNameTextBox.Location = New System.Drawing.Point(124, 69)
+        Me.ShipNameTextBox.Name = "ShipNameTextBox"
+        Me.ShipNameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ShipNameTextBox.TabIndex = 5
         '
-        'DescriptionTextBox
+        'ShipDescriptionTextBox
         '
-        Me.DescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipsBindingSource, "Description", True))
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(172, 122)
-        Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.DescriptionTextBox.TabIndex = 7
+        Me.ShipDescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipsBindingSource, "ShipDescription", True))
+        Me.ShipDescriptionTextBox.Location = New System.Drawing.Point(34, 114)
+        Me.ShipDescriptionTextBox.Multiline = True
+        Me.ShipDescriptionTextBox.Name = "ShipDescriptionTextBox"
+        Me.ShipDescriptionTextBox.Size = New System.Drawing.Size(190, 111)
+        Me.ShipDescriptionTextBox.TabIndex = 7
         '
-        'ClassIDComboBox
+        'ShipsBindingSource
         '
-        Me.ClassIDComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipsBindingSource, "ClassID", True))
-        Me.ClassIDComboBox.DataSource = Me.ClassesBindingSource
-        Me.ClassIDComboBox.DisplayMember = "Name"
-        Me.ClassIDComboBox.FormattingEnabled = True
-        Me.ClassIDComboBox.Location = New System.Drawing.Point(172, 148)
-        Me.ClassIDComboBox.Name = "ClassIDComboBox"
-        Me.ClassIDComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.ClassIDComboBox.TabIndex = 9
-        Me.ClassIDComboBox.ValueMember = "ClassID"
+        Me.ShipsBindingSource.DataMember = "Ships"
+        Me.ShipsBindingSource.DataSource = Me.SpaceshipDataSet
         '
-        'ClassesBindingSource
+        'SpaceshipDataSet
         '
-        Me.ClassesBindingSource.DataMember = "Classes"
-        Me.ClassesBindingSource.DataSource = Me.SpaceshipDataSet
+        Me.SpaceshipDataSet.DataSetName = "SpaceshipDataSet"
+        Me.SpaceshipDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ShowIDComboBox
+        'ShipsTableAdapter
         '
-        Me.ShowIDComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipsBindingSource, "ShowID", True))
-        Me.ShowIDComboBox.DataSource = Me.ShowsBindingSource
-        Me.ShowIDComboBox.DisplayMember = "Name"
-        Me.ShowIDComboBox.FormattingEnabled = True
-        Me.ShowIDComboBox.Location = New System.Drawing.Point(172, 175)
-        Me.ShowIDComboBox.Name = "ShowIDComboBox"
-        Me.ShowIDComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.ShowIDComboBox.TabIndex = 11
-        Me.ShowIDComboBox.ValueMember = "ShowID"
+        Me.ShipsTableAdapter.ClearBeforeFill = True
         '
-        'ShowsBindingSource
+        'TableAdapterManager
         '
-        Me.ShowsBindingSource.DataMember = "Shows"
-        Me.ShowsBindingSource.DataSource = Me.SpaceshipDataSet
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClassesTableAdapter = Nothing
+        Me.TableAdapterManager.ShipImagesTableAdapter = Nothing
+        Me.TableAdapterManager.ShipsTableAdapter = Me.ShipsTableAdapter
+        Me.TableAdapterManager.ShowsTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = SpaceshipDB.SpaceshipDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'ImageIDLabel
+        '
+        ImageIDLabel.AutoSize = True
+        ImageIDLabel.Location = New System.Drawing.Point(269, 94)
+        ImageIDLabel.Name = "ImageIDLabel"
+        ImageIDLabel.Size = New System.Drawing.Size(44, 13)
+        ImageIDLabel.TabIndex = 12
+        ImageIDLabel.Text = "Images:"
         '
         'ImageIDComboBox
         '
@@ -376,9 +314,9 @@ Partial Class ShipDialog
         Me.ImageIDComboBox.DataSource = Me.ShipImagesBindingSource
         Me.ImageIDComboBox.DisplayMember = "ImageID"
         Me.ImageIDComboBox.FormattingEnabled = True
-        Me.ImageIDComboBox.Location = New System.Drawing.Point(172, 202)
+        Me.ImageIDComboBox.Location = New System.Drawing.Point(362, 91)
         Me.ImageIDComboBox.Name = "ImageIDComboBox"
-        Me.ImageIDComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.ImageIDComboBox.Size = New System.Drawing.Size(100, 21)
         Me.ImageIDComboBox.TabIndex = 13
         Me.ImageIDComboBox.ValueMember = "ImageID"
         '
@@ -387,25 +325,89 @@ Partial Class ShipDialog
         Me.ShipImagesBindingSource.DataMember = "ShipImages"
         Me.ShipImagesBindingSource.DataSource = Me.SpaceshipDataSet
         '
+        'ShipImagesTableAdapter
+        '
+        Me.ShipImagesTableAdapter.ClearBeforeFill = True
+        '
+        'ShowIDLabel
+        '
+        ShowIDLabel.AutoSize = True
+        ShowIDLabel.Location = New System.Drawing.Point(269, 68)
+        ShowIDLabel.Name = "ShowIDLabel"
+        ShowIDLabel.Size = New System.Drawing.Size(42, 13)
+        ShowIDLabel.TabIndex = 13
+        ShowIDLabel.Text = "Shows:"
+        '
+        'ShowIDComboBox
+        '
+        Me.ShowIDComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipsBindingSource, "ShowID", True))
+        Me.ShowIDComboBox.DataSource = Me.ShowsBindingSource
+        Me.ShowIDComboBox.DisplayMember = "ShowID"
+        Me.ShowIDComboBox.FormattingEnabled = True
+        Me.ShowIDComboBox.Location = New System.Drawing.Point(362, 65)
+        Me.ShowIDComboBox.Name = "ShowIDComboBox"
+        Me.ShowIDComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.ShowIDComboBox.TabIndex = 14
+        Me.ShowIDComboBox.ValueMember = "ShowID"
+        '
+        'ShowsBindingSource
+        '
+        Me.ShowsBindingSource.DataMember = "Shows"
+        Me.ShowsBindingSource.DataSource = Me.SpaceshipDataSet
+        '
+        'ShowsTableAdapter
+        '
+        Me.ShowsTableAdapter.ClearBeforeFill = True
+        '
+        'ClassIDLabel
+        '
+        ClassIDLabel.AutoSize = True
+        ClassIDLabel.Location = New System.Drawing.Point(269, 41)
+        ClassIDLabel.Name = "ClassIDLabel"
+        ClassIDLabel.Size = New System.Drawing.Size(46, 13)
+        ClassIDLabel.TabIndex = 14
+        ClassIDLabel.Text = "Classes:"
+        '
+        'ClassIDComboBox
+        '
+        Me.ClassIDComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipsBindingSource, "ClassID", True))
+        Me.ClassIDComboBox.DataSource = Me.ClassesBindingSource
+        Me.ClassIDComboBox.DisplayMember = "ClassID"
+        Me.ClassIDComboBox.FormattingEnabled = True
+        Me.ClassIDComboBox.Location = New System.Drawing.Point(362, 38)
+        Me.ClassIDComboBox.Name = "ClassIDComboBox"
+        Me.ClassIDComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.ClassIDComboBox.TabIndex = 15
+        Me.ClassIDComboBox.ValueMember = "ClassID"
+        '
+        'ClassesBindingSource
+        '
+        Me.ClassesBindingSource.DataMember = "Classes"
+        Me.ClassesBindingSource.DataSource = Me.SpaceshipDataSet
+        '
+        'ClassesTableAdapter
+        '
+        Me.ClassesTableAdapter.ClearBeforeFill = True
+        '
         'ShipDialog
         '
         Me.AcceptButton = Me.OK_Button
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(368, 342)
-        Me.Controls.Add(ShipIDLabel)
-        Me.Controls.Add(Me.ShipIDTextBox)
-        Me.Controls.Add(NameLabel)
-        Me.Controls.Add(Me.NameTextBox)
-        Me.Controls.Add(DescriptionLabel)
-        Me.Controls.Add(Me.DescriptionTextBox)
+        Me.ClientSize = New System.Drawing.Size(484, 249)
         Me.Controls.Add(ClassIDLabel)
         Me.Controls.Add(Me.ClassIDComboBox)
         Me.Controls.Add(ShowIDLabel)
         Me.Controls.Add(Me.ShowIDComboBox)
         Me.Controls.Add(ImageIDLabel)
         Me.Controls.Add(Me.ImageIDComboBox)
+        Me.Controls.Add(ShipIDLabel)
+        Me.Controls.Add(Me.ShipIDTextBox)
+        Me.Controls.Add(ShipNameLabel)
+        Me.Controls.Add(Me.ShipNameTextBox)
+        Me.Controls.Add(ShipDescriptionLabel)
+        Me.Controls.Add(Me.ShipDescriptionTextBox)
         Me.Controls.Add(Me.ShipsBindingNavigator)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -416,14 +418,14 @@ Partial Class ShipDialog
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "ShipDialog"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.SpaceshipDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ShipsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ShipsBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ShipsBindingNavigator.ResumeLayout(False)
         Me.ShipsBindingNavigator.PerformLayout()
-        CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ShowsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShipsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpaceshipDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ShipImagesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShowsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -448,16 +450,16 @@ Partial Class ShipDialog
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents ShipsBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents ClassesTableAdapter As SpaceshipDataSetTableAdapters.ClassesTableAdapter
     Friend WithEvents ShipIDTextBox As TextBox
-    Friend WithEvents NameTextBox As TextBox
-    Friend WithEvents DescriptionTextBox As TextBox
-    Friend WithEvents ClassIDComboBox As ComboBox
-    Friend WithEvents ShowIDComboBox As ComboBox
+    Friend WithEvents ShipNameTextBox As TextBox
+    Friend WithEvents ShipDescriptionTextBox As TextBox
     Friend WithEvents ImageIDComboBox As ComboBox
-    Friend WithEvents ClassesBindingSource As BindingSource
-    Friend WithEvents ShowsTableAdapter As SpaceshipDataSetTableAdapters.ShowsTableAdapter
-    Friend WithEvents ShowsBindingSource As BindingSource
-    Friend WithEvents ShipImagesTableAdapter As SpaceshipDataSetTableAdapters.ShipImagesTableAdapter
     Friend WithEvents ShipImagesBindingSource As BindingSource
+    Friend WithEvents ShipImagesTableAdapter As SpaceshipDataSetTableAdapters.ShipImagesTableAdapter
+    Friend WithEvents ShowIDComboBox As ComboBox
+    Friend WithEvents ShowsBindingSource As BindingSource
+    Friend WithEvents ShowsTableAdapter As SpaceshipDataSetTableAdapters.ShowsTableAdapter
+    Friend WithEvents ClassIDComboBox As ComboBox
+    Friend WithEvents ClassesBindingSource As BindingSource
+    Friend WithEvents ClassesTableAdapter As SpaceshipDataSetTableAdapters.ClassesTableAdapter
 End Class

@@ -12,7 +12,7 @@ Public Class ShowsDialog
         Me.Close()
     End Sub
 
-    Private Sub ShowsBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles ShowsBindingNavigatorSaveItem.Click
+    Private Sub ShowsBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.ShowsBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)
@@ -20,6 +20,8 @@ Public Class ShowsDialog
     End Sub
 
     Private Sub ShowsDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpaceshipDataSet.Ships' table. You can move, or remove it, as needed.
+        Me.ShipsTableAdapter.Fill(Me.SpaceshipDataSet.Ships)
         'TODO: This line of code loads data into the 'SpaceshipDataSet.Shows' table. You can move, or remove it, as needed.
         Me.ShowsTableAdapter.Fill(Me.SpaceshipDataSet.Shows)
 
@@ -30,11 +32,19 @@ Public Class ShowsDialog
         ofd.Filter = "JPEG|*.jpg|PNG|*.png"
 
         If ofd.ShowDialog() = DialogResult.OK Then
-            ImagePictureBox.Image = Image.FromFile(ofd.FileName)
+            ShowImagePictureBox.Image = Image.FromFile(ofd.FileName)
         End If
     End Sub
 
     Private Sub bRemoveImage_Click(sender As Object, e As EventArgs) Handles bRemoveImage.Click
-        ImagePictureBox.Image = Nothing
+        ShowImagePictureBox.Image = Nothing
     End Sub
+
+    Private Sub ShowsBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs) Handles ShowsBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.ShowsBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)
+
+    End Sub
+
 End Class

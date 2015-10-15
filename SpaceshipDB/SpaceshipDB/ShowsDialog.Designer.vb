@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ShowsDialog
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,19 @@ Partial Class ShowsDialog
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ShowIDLabel As System.Windows.Forms.Label
-        Dim NameLabel As System.Windows.Forms.Label
-        Dim DescriptionLabel As System.Windows.Forms.Label
-        Dim ImageLabel As System.Windows.Forms.Label
+        Dim ShowNameLabel As System.Windows.Forms.Label
+        Dim ShowDescriptionLabel As System.Windows.Forms.Label
+        Dim ShowImageLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ShowsDialog))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
+        Me.bAddImage = New System.Windows.Forms.Button()
+        Me.bRemoveImage = New System.Windows.Forms.Button()
         Me.SpaceshipDataSet = New SpaceshipDB.SpaceshipDataSet()
         Me.ShowsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ShowsTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShowsTableAdapter()
@@ -49,58 +51,59 @@ Partial Class ShowsDialog
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ShowsBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ShowIDTextBox = New System.Windows.Forms.TextBox()
-        Me.NameTextBox = New System.Windows.Forms.TextBox()
-        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
-        Me.ImagePictureBox = New System.Windows.Forms.PictureBox()
-        Me.bAddImage = New System.Windows.Forms.Button()
-        Me.bRemoveImage = New System.Windows.Forms.Button()
+        Me.ShowNameTextBox = New System.Windows.Forms.TextBox()
+        Me.ShowDescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.ShowImagePictureBox = New System.Windows.Forms.PictureBox()
+        Me.ShipsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ShipsTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShipsTableAdapter()
         ShowIDLabel = New System.Windows.Forms.Label()
-        NameLabel = New System.Windows.Forms.Label()
-        DescriptionLabel = New System.Windows.Forms.Label()
-        ImageLabel = New System.Windows.Forms.Label()
+        ShowNameLabel = New System.Windows.Forms.Label()
+        ShowDescriptionLabel = New System.Windows.Forms.Label()
+        ShowImageLabel = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.SpaceshipDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShowsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShowsBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ShowsBindingNavigator.SuspendLayout()
-        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShowImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShipsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ShowIDLabel
         '
         ShowIDLabel.AutoSize = True
-        ShowIDLabel.Location = New System.Drawing.Point(43, 51)
+        ShowIDLabel.Location = New System.Drawing.Point(23, 49)
         ShowIDLabel.Name = "ShowIDLabel"
-        ShowIDLabel.Size = New System.Drawing.Size(51, 13)
-        ShowIDLabel.TabIndex = 2
-        ShowIDLabel.Text = "Show ID:"
+        ShowIDLabel.Size = New System.Drawing.Size(37, 13)
+        ShowIDLabel.TabIndex = 12
+        ShowIDLabel.Text = "Show:"
         '
-        'NameLabel
+        'ShowNameLabel
         '
-        NameLabel.AutoSize = True
-        NameLabel.Location = New System.Drawing.Point(43, 77)
-        NameLabel.Name = "NameLabel"
-        NameLabel.Size = New System.Drawing.Size(38, 13)
-        NameLabel.TabIndex = 4
-        NameLabel.Text = "Name:"
+        ShowNameLabel.AutoSize = True
+        ShowNameLabel.Location = New System.Drawing.Point(23, 77)
+        ShowNameLabel.Name = "ShowNameLabel"
+        ShowNameLabel.Size = New System.Drawing.Size(68, 13)
+        ShowNameLabel.TabIndex = 14
+        ShowNameLabel.Text = "Show Name:"
         '
-        'DescriptionLabel
+        'ShowDescriptionLabel
         '
-        DescriptionLabel.AutoSize = True
-        DescriptionLabel.Location = New System.Drawing.Point(43, 103)
-        DescriptionLabel.Name = "DescriptionLabel"
-        DescriptionLabel.Size = New System.Drawing.Size(63, 13)
-        DescriptionLabel.TabIndex = 6
-        DescriptionLabel.Text = "Description:"
+        ShowDescriptionLabel.AutoSize = True
+        ShowDescriptionLabel.Location = New System.Drawing.Point(262, 109)
+        ShowDescriptionLabel.Name = "ShowDescriptionLabel"
+        ShowDescriptionLabel.Size = New System.Drawing.Size(93, 13)
+        ShowDescriptionLabel.TabIndex = 16
+        ShowDescriptionLabel.Text = "Show Description:"
         '
-        'ImageLabel
+        'ShowImageLabel
         '
-        ImageLabel.AutoSize = True
-        ImageLabel.Location = New System.Drawing.Point(43, 126)
-        ImageLabel.Name = "ImageLabel"
-        ImageLabel.Size = New System.Drawing.Size(39, 13)
-        ImageLabel.TabIndex = 8
-        ImageLabel.Text = "Image:"
+        ShowImageLabel.AutoSize = True
+        ShowImageLabel.Location = New System.Drawing.Point(23, 109)
+        ShowImageLabel.Name = "ShowImageLabel"
+        ShowImageLabel.Size = New System.Drawing.Size(69, 13)
+        ShowImageLabel.TabIndex = 18
+        ShowImageLabel.Text = "Show Image:"
         '
         'TableLayoutPanel1
         '
@@ -110,7 +113,7 @@ Partial Class ShowsDialog
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(407, 415)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(347, 258)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -135,6 +138,24 @@ Partial Class ShowsDialog
         Me.Cancel_Button.Size = New System.Drawing.Size(67, 23)
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancel"
+        '
+        'bAddImage
+        '
+        Me.bAddImage.Location = New System.Drawing.Point(26, 254)
+        Me.bAddImage.Name = "bAddImage"
+        Me.bAddImage.Size = New System.Drawing.Size(75, 23)
+        Me.bAddImage.TabIndex = 10
+        Me.bAddImage.Text = "Add Image"
+        Me.bAddImage.UseVisualStyleBackColor = True
+        '
+        'bRemoveImage
+        '
+        Me.bRemoveImage.Location = New System.Drawing.Point(148, 254)
+        Me.bRemoveImage.Name = "bRemoveImage"
+        Me.bRemoveImage.Size = New System.Drawing.Size(91, 23)
+        Me.bRemoveImage.TabIndex = 11
+        Me.bRemoveImage.Text = "Remove Image"
+        Me.bRemoveImage.UseVisualStyleBackColor = True
         '
         'SpaceshipDataSet
         '
@@ -173,8 +194,8 @@ Partial Class ShowsDialog
         Me.ShowsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ShowsBindingNavigator.Name = "ShowsBindingNavigator"
         Me.ShowsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ShowsBindingNavigator.Size = New System.Drawing.Size(565, 25)
-        Me.ShowsBindingNavigator.TabIndex = 1
+        Me.ShowsBindingNavigator.Size = New System.Drawing.Size(505, 25)
+        Me.ShowsBindingNavigator.TabIndex = 12
         Me.ShowsBindingNavigator.Text = "BindingNavigator1"
         '
         'BindingNavigatorAddNewItem
@@ -273,55 +294,47 @@ Partial Class ShowsDialog
         'ShowIDTextBox
         '
         Me.ShowIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShowsBindingSource, "ShowID", True))
-        Me.ShowIDTextBox.Location = New System.Drawing.Point(112, 48)
+        Me.ShowIDTextBox.Location = New System.Drawing.Point(122, 46)
         Me.ShowIDTextBox.Name = "ShowIDTextBox"
         Me.ShowIDTextBox.ReadOnly = True
         Me.ShowIDTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ShowIDTextBox.TabIndex = 3
+        Me.ShowIDTextBox.TabIndex = 13
         '
-        'NameTextBox
+        'ShowNameTextBox
         '
-        Me.NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShowsBindingSource, "Name", True))
-        Me.NameTextBox.Location = New System.Drawing.Point(112, 74)
-        Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.NameTextBox.TabIndex = 5
+        Me.ShowNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShowsBindingSource, "ShowName", True))
+        Me.ShowNameTextBox.Location = New System.Drawing.Point(122, 74)
+        Me.ShowNameTextBox.Name = "ShowNameTextBox"
+        Me.ShowNameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ShowNameTextBox.TabIndex = 15
         '
-        'DescriptionTextBox
+        'ShowDescriptionTextBox
         '
-        Me.DescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShowsBindingSource, "Description", True))
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(112, 100)
-        Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.DescriptionTextBox.TabIndex = 7
+        Me.ShowDescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShowsBindingSource, "ShowDescription", True))
+        Me.ShowDescriptionTextBox.Location = New System.Drawing.Point(265, 125)
+        Me.ShowDescriptionTextBox.Multiline = True
+        Me.ShowDescriptionTextBox.Name = "ShowDescriptionTextBox"
+        Me.ShowDescriptionTextBox.Size = New System.Drawing.Size(220, 109)
+        Me.ShowDescriptionTextBox.TabIndex = 17
         '
-        'ImagePictureBox
+        'ShowImagePictureBox
         '
-        Me.ImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.ShowsBindingSource, "Image", True))
-        Me.ImagePictureBox.Location = New System.Drawing.Point(112, 126)
-        Me.ImagePictureBox.Name = "ImagePictureBox"
-        Me.ImagePictureBox.Size = New System.Drawing.Size(200, 159)
-        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ImagePictureBox.TabIndex = 9
-        Me.ImagePictureBox.TabStop = False
+        Me.ShowImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.ShowsBindingSource, "ShowImage", True))
+        Me.ShowImagePictureBox.Location = New System.Drawing.Point(26, 125)
+        Me.ShowImagePictureBox.Name = "ShowImagePictureBox"
+        Me.ShowImagePictureBox.Size = New System.Drawing.Size(213, 109)
+        Me.ShowImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ShowImagePictureBox.TabIndex = 19
+        Me.ShowImagePictureBox.TabStop = False
         '
-        'bAddImage
+        'ShipsBindingSource
         '
-        Me.bAddImage.Location = New System.Drawing.Point(83, 308)
-        Me.bAddImage.Name = "bAddImage"
-        Me.bAddImage.Size = New System.Drawing.Size(75, 23)
-        Me.bAddImage.TabIndex = 10
-        Me.bAddImage.Text = "Add Image"
-        Me.bAddImage.UseVisualStyleBackColor = True
+        Me.ShipsBindingSource.DataMember = "FK__Ships__ShowID__5BE2A6F2"
+        Me.ShipsBindingSource.DataSource = Me.ShowsBindingSource
         '
-        'bRemoveImage
+        'ShipsTableAdapter
         '
-        Me.bRemoveImage.Location = New System.Drawing.Point(221, 308)
-        Me.bRemoveImage.Name = "bRemoveImage"
-        Me.bRemoveImage.Size = New System.Drawing.Size(91, 23)
-        Me.bRemoveImage.TabIndex = 11
-        Me.bRemoveImage.Text = "Remove Image"
-        Me.bRemoveImage.UseVisualStyleBackColor = True
+        Me.ShipsTableAdapter.ClearBeforeFill = True
         '
         'ShowsDialog
         '
@@ -329,18 +342,18 @@ Partial Class ShowsDialog
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(565, 456)
-        Me.Controls.Add(Me.bRemoveImage)
-        Me.Controls.Add(Me.bAddImage)
+        Me.ClientSize = New System.Drawing.Size(505, 299)
         Me.Controls.Add(ShowIDLabel)
         Me.Controls.Add(Me.ShowIDTextBox)
-        Me.Controls.Add(NameLabel)
-        Me.Controls.Add(Me.NameTextBox)
-        Me.Controls.Add(DescriptionLabel)
-        Me.Controls.Add(Me.DescriptionTextBox)
-        Me.Controls.Add(ImageLabel)
-        Me.Controls.Add(Me.ImagePictureBox)
+        Me.Controls.Add(ShowNameLabel)
+        Me.Controls.Add(Me.ShowNameTextBox)
+        Me.Controls.Add(ShowDescriptionLabel)
+        Me.Controls.Add(Me.ShowDescriptionTextBox)
+        Me.Controls.Add(ShowImageLabel)
+        Me.Controls.Add(Me.ShowImagePictureBox)
         Me.Controls.Add(Me.ShowsBindingNavigator)
+        Me.Controls.Add(Me.bRemoveImage)
+        Me.Controls.Add(Me.bAddImage)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -355,7 +368,8 @@ Partial Class ShowsDialog
         CType(Me.ShowsBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ShowsBindingNavigator.ResumeLayout(False)
         Me.ShowsBindingNavigator.PerformLayout()
-        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShowImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShipsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -363,6 +377,8 @@ Partial Class ShowsDialog
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents OK_Button As System.Windows.Forms.Button
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
+    Friend WithEvents bAddImage As Button
+    Friend WithEvents bRemoveImage As Button
     Friend WithEvents SpaceshipDataSet As SpaceshipDataSet
     Friend WithEvents ShowsBindingSource As BindingSource
     Friend WithEvents ShowsTableAdapter As SpaceshipDataSetTableAdapters.ShowsTableAdapter
@@ -381,9 +397,9 @@ Partial Class ShowsDialog
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents ShowsBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents ShowIDTextBox As TextBox
-    Friend WithEvents NameTextBox As TextBox
-    Friend WithEvents DescriptionTextBox As TextBox
-    Friend WithEvents ImagePictureBox As PictureBox
-    Friend WithEvents bAddImage As Button
-    Friend WithEvents bRemoveImage As Button
+    Friend WithEvents ShowNameTextBox As TextBox
+    Friend WithEvents ShowDescriptionTextBox As TextBox
+    Friend WithEvents ShowImagePictureBox As PictureBox
+    Friend WithEvents ShipsBindingSource As BindingSource
+    Friend WithEvents ShipsTableAdapter As SpaceshipDataSetTableAdapters.ShipsTableAdapter
 End Class

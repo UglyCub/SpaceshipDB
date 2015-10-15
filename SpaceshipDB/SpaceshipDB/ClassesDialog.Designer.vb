@@ -23,10 +23,10 @@ Partial Class ClassesDialog
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClassesDialog))
         Dim ClassIDLabel As System.Windows.Forms.Label
-        Dim NameLabel As System.Windows.Forms.Label
-        Dim DescriptionLabel As System.Windows.Forms.Label
+        Dim ClassNameLabel As System.Windows.Forms.Label
+        Dim ClassDescriptionLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClassesDialog))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
@@ -35,30 +35,57 @@ Partial Class ClassesDialog
         Me.ClassesTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ClassesTableAdapter()
         Me.TableAdapterManager = New SpaceshipDB.SpaceshipDataSetTableAdapters.TableAdapterManager()
         Me.ClassesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ClassesBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ClassIDTextBox = New System.Windows.Forms.TextBox()
-        Me.NameTextBox = New System.Windows.Forms.TextBox()
-        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.ClassNameTextBox = New System.Windows.Forms.TextBox()
+        Me.ClassDescriptionTextBox = New System.Windows.Forms.TextBox()
         ClassIDLabel = New System.Windows.Forms.Label()
-        NameLabel = New System.Windows.Forms.Label()
-        DescriptionLabel = New System.Windows.Forms.Label()
+        ClassNameLabel = New System.Windows.Forms.Label()
+        ClassDescriptionLabel = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.SpaceshipDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClassesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClassesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClassesBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'ClassIDLabel
+        '
+        ClassIDLabel.AutoSize = True
+        ClassIDLabel.Location = New System.Drawing.Point(30, 57)
+        ClassIDLabel.Name = "ClassIDLabel"
+        ClassIDLabel.Size = New System.Drawing.Size(35, 13)
+        ClassIDLabel.TabIndex = 2
+        ClassIDLabel.Text = "Class:"
+        '
+        'ClassNameLabel
+        '
+        ClassNameLabel.AutoSize = True
+        ClassNameLabel.Location = New System.Drawing.Point(30, 83)
+        ClassNameLabel.Name = "ClassNameLabel"
+        ClassNameLabel.Size = New System.Drawing.Size(66, 13)
+        ClassNameLabel.TabIndex = 4
+        ClassNameLabel.Text = "Class Name:"
+        '
+        'ClassDescriptionLabel
+        '
+        ClassDescriptionLabel.AutoSize = True
+        ClassDescriptionLabel.Location = New System.Drawing.Point(30, 109)
+        ClassDescriptionLabel.Name = "ClassDescriptionLabel"
+        ClassDescriptionLabel.Size = New System.Drawing.Size(91, 13)
+        ClassDescriptionLabel.TabIndex = 6
+        ClassDescriptionLabel.Text = "Class Description:"
         '
         'TableLayoutPanel1
         '
@@ -68,7 +95,7 @@ Partial Class ClassesDialog
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(230, 226)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(134, 234)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -131,9 +158,34 @@ Partial Class ClassesDialog
         Me.ClassesBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ClassesBindingNavigator.Name = "ClassesBindingNavigator"
         Me.ClassesBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ClassesBindingNavigator.Size = New System.Drawing.Size(388, 25)
+        Me.ClassesBindingNavigator.Size = New System.Drawing.Size(292, 25)
         Me.ClassesBindingNavigator.TabIndex = 1
         Me.ClassesBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -167,17 +219,10 @@ Partial Class ClassesDialog
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -185,7 +230,7 @@ Partial Class ClassesDialog
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -194,92 +239,47 @@ Partial Class ClassesDialog
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'ClassesBindingNavigatorSaveItem
         '
         Me.ClassesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.ClassesBindingNavigatorSaveItem.Image = CType(resources.GetObject("ClassesBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.ClassesBindingNavigatorSaveItem.Name = "ClassesBindingNavigatorSaveItem"
-        Me.ClassesBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.ClassesBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ClassesBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'ClassIDLabel
-        '
-        ClassIDLabel.AutoSize = True
-        ClassIDLabel.Location = New System.Drawing.Point(12, 54)
-        ClassIDLabel.Name = "ClassIDLabel"
-        ClassIDLabel.Size = New System.Drawing.Size(49, 13)
-        ClassIDLabel.TabIndex = 2
-        ClassIDLabel.Text = "Class ID:"
         '
         'ClassIDTextBox
         '
         Me.ClassIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassesBindingSource, "ClassID", True))
-        Me.ClassIDTextBox.Location = New System.Drawing.Point(81, 51)
+        Me.ClassIDTextBox.Location = New System.Drawing.Point(127, 54)
         Me.ClassIDTextBox.Name = "ClassIDTextBox"
         Me.ClassIDTextBox.ReadOnly = True
         Me.ClassIDTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ClassIDTextBox.TabIndex = 3
         '
-        'NameLabel
+        'ClassNameTextBox
         '
-        NameLabel.AutoSize = True
-        NameLabel.Location = New System.Drawing.Point(12, 80)
-        NameLabel.Name = "NameLabel"
-        NameLabel.Size = New System.Drawing.Size(38, 13)
-        NameLabel.TabIndex = 4
-        NameLabel.Text = "Name:"
+        Me.ClassNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassesBindingSource, "ClassName", True))
+        Me.ClassNameTextBox.Location = New System.Drawing.Point(127, 80)
+        Me.ClassNameTextBox.Name = "ClassNameTextBox"
+        Me.ClassNameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ClassNameTextBox.TabIndex = 5
         '
-        'NameTextBox
+        'ClassDescriptionTextBox
         '
-        Me.NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassesBindingSource, "Name", True))
-        Me.NameTextBox.Location = New System.Drawing.Point(81, 77)
-        Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.NameTextBox.TabIndex = 5
-        '
-        'DescriptionLabel
-        '
-        DescriptionLabel.AutoSize = True
-        DescriptionLabel.Location = New System.Drawing.Point(12, 106)
-        DescriptionLabel.Name = "DescriptionLabel"
-        DescriptionLabel.Size = New System.Drawing.Size(63, 13)
-        DescriptionLabel.TabIndex = 6
-        DescriptionLabel.Text = "Description:"
-        '
-        'DescriptionTextBox
-        '
-        Me.DescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassesBindingSource, "Description", True))
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(81, 103)
-        Me.DescriptionTextBox.Multiline = True
-        Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(178, 94)
-        Me.DescriptionTextBox.TabIndex = 7
+        Me.ClassDescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClassesBindingSource, "ClassDescription", True))
+        Me.ClassDescriptionTextBox.Location = New System.Drawing.Point(33, 125)
+        Me.ClassDescriptionTextBox.Multiline = True
+        Me.ClassDescriptionTextBox.Name = "ClassDescriptionTextBox"
+        Me.ClassDescriptionTextBox.Size = New System.Drawing.Size(194, 92)
+        Me.ClassDescriptionTextBox.TabIndex = 7
         '
         'ClassesDialog
         '
@@ -287,13 +287,13 @@ Partial Class ClassesDialog
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(388, 267)
+        Me.ClientSize = New System.Drawing.Size(292, 275)
         Me.Controls.Add(ClassIDLabel)
         Me.Controls.Add(Me.ClassIDTextBox)
-        Me.Controls.Add(NameLabel)
-        Me.Controls.Add(Me.NameTextBox)
-        Me.Controls.Add(DescriptionLabel)
-        Me.Controls.Add(Me.DescriptionTextBox)
+        Me.Controls.Add(ClassNameLabel)
+        Me.Controls.Add(Me.ClassNameTextBox)
+        Me.Controls.Add(ClassDescriptionLabel)
+        Me.Controls.Add(Me.ClassDescriptionTextBox)
         Me.Controls.Add(Me.ClassesBindingNavigator)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -334,6 +334,6 @@ Partial Class ClassesDialog
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents ClassesBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents ClassIDTextBox As TextBox
-    Friend WithEvents NameTextBox As TextBox
-    Friend WithEvents DescriptionTextBox As TextBox
+    Friend WithEvents ClassNameTextBox As TextBox
+    Friend WithEvents ClassDescriptionTextBox As TextBox
 End Class

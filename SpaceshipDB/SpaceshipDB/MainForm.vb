@@ -22,4 +22,16 @@
 
         sd.ShowDialog()
     End Sub
+
+    Private Sub ByShowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ByShowToolStripMenuItem.Click
+        Dim ps As New PrintShowForm
+
+        ps.ShowDialog()
+    End Sub
+
+    Private Sub ByClassToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ByClassToolStripMenuItem.Click
+        Dim pc As New PrintClassForm
+
+        pc.ShowDialog()
+    End Sub
 End Class

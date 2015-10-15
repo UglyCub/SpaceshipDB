@@ -13,17 +13,24 @@ Public Class ShipDialog
     End Sub
 
     Private Sub ShipDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.ShipsTableAdapter.Fill(Me.SpaceshipDataSet.Ships)
         'TODO: This line of code loads data into the 'SpaceshipDataSet.Classes' table. You can move, or remove it, as needed.
         Me.ClassesTableAdapter.Fill(Me.SpaceshipDataSet.Classes)
         'TODO: This line of code loads data into the 'SpaceshipDataSet.Shows' table. You can move, or remove it, as needed.
         Me.ShowsTableAdapter.Fill(Me.SpaceshipDataSet.Shows)
         'TODO: This line of code loads data into the 'SpaceshipDataSet.ShipImages' table. You can move, or remove it, as needed.
         Me.ShipImagesTableAdapter.Fill(Me.SpaceshipDataSet.ShipImages)
+        'TODO: This line of code loads data into the 'SpaceshipDataSet.Ships' table. You can move, or remove it, as needed.
+        Me.ShipsTableAdapter.Fill(Me.SpaceshipDataSet.Ships)
+    End Sub
+
+    Private Sub ShipsBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.ShipsBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)
 
     End Sub
 
-    Private Sub ShipsBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles ShipsBindingNavigatorSaveItem.Click
+    Private Sub ShipsBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs) Handles ShipsBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.ShipsBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)

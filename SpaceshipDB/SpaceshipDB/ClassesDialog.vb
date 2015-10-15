@@ -12,7 +12,7 @@ Public Class ClassesDialog
         Me.Close()
     End Sub
 
-    Private Sub ClassesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles ClassesBindingNavigatorSaveItem.Click
+    Private Sub ClassesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.ClassesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)
@@ -20,9 +20,18 @@ Public Class ClassesDialog
     End Sub
 
     Private Sub ClassesDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SpaceshipDataSet.Classes' table. You can move, or remove it, as needed.
+        Me.ClassesTableAdapter.Fill(Me.SpaceshipDataSet.Classes)
 
         'TODO: This line of code loads data into the 'SpaceshipDataSet.Classes' table. You can move, or remove it, as needed.
         Me.ClassesTableAdapter.Fill(Me.SpaceshipDataSet.Classes)
+
+    End Sub
+
+    Private Sub ClassesBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs) Handles ClassesBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.ClassesBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)
 
     End Sub
 End Class

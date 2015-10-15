@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ShipImageDialog
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,13 @@ Partial Class ShipImageDialog
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ShipImageDialog))
+        Dim ShipImageLabel As System.Windows.Forms.Label
+        Dim ImageDescriptionLabel As System.Windows.Forms.Label
         Dim ImageIDLabel As System.Windows.Forms.Label
-        Dim ImageLabel As System.Windows.Forms.Label
-        Dim DescriptionLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ShipImageDialog))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
@@ -36,32 +36,62 @@ Partial Class ShipImageDialog
         Me.ShipImagesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ShipImagesTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShipImagesTableAdapter()
         Me.TableAdapterManager = New SpaceshipDB.SpaceshipDataSetTableAdapters.TableAdapterManager()
+        Me.ShipsTableAdapter = New SpaceshipDB.SpaceshipDataSetTableAdapters.ShipsTableAdapter()
         Me.ShipImagesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ShipImagesBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.ImageIDTextBox = New System.Windows.Forms.TextBox()
-        Me.ImagePictureBox = New System.Windows.Forms.PictureBox()
-        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.ShipImagePictureBox = New System.Windows.Forms.PictureBox()
+        Me.ImageDescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.ShipsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ImageIDComboBox = New System.Windows.Forms.ComboBox()
+        ShipImageLabel = New System.Windows.Forms.Label()
+        ImageDescriptionLabel = New System.Windows.Forms.Label()
         ImageIDLabel = New System.Windows.Forms.Label()
-        ImageLabel = New System.Windows.Forms.Label()
-        DescriptionLabel = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.SpaceshipDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShipImagesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ShipImagesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ShipImagesBindingNavigator.SuspendLayout()
-        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShipImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ShipsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ShipImageLabel
+        '
+        ShipImageLabel.AutoSize = True
+        ShipImageLabel.Location = New System.Drawing.Point(36, 92)
+        ShipImageLabel.Name = "ShipImageLabel"
+        ShipImageLabel.Size = New System.Drawing.Size(63, 13)
+        ShipImageLabel.TabIndex = 16
+        ShipImageLabel.Text = "Ship Image:"
+        '
+        'ImageDescriptionLabel
+        '
+        ImageDescriptionLabel.AutoSize = True
+        ImageDescriptionLabel.Location = New System.Drawing.Point(283, 92)
+        ImageDescriptionLabel.Name = "ImageDescriptionLabel"
+        ImageDescriptionLabel.Size = New System.Drawing.Size(95, 13)
+        ImageDescriptionLabel.TabIndex = 18
+        ImageDescriptionLabel.Text = "Image Description:"
+        '
+        'ImageIDLabel
+        '
+        ImageIDLabel.AutoSize = True
+        ImageIDLabel.Location = New System.Drawing.Point(36, 64)
+        ImageIDLabel.Name = "ImageIDLabel"
+        ImageIDLabel.Size = New System.Drawing.Size(53, 13)
+        ImageIDLabel.TabIndex = 20
+        ImageIDLabel.Text = "Image ID:"
         '
         'TableLayoutPanel1
         '
@@ -71,7 +101,7 @@ Partial Class ShipImageDialog
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(279, 415)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(404, 288)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -99,7 +129,7 @@ Partial Class ShipImageDialog
         '
         'bRemoveImage
         '
-        Me.bRemoveImage.Location = New System.Drawing.Point(167, 244)
+        Me.bRemoveImage.Location = New System.Drawing.Point(177, 272)
         Me.bRemoveImage.Name = "bRemoveImage"
         Me.bRemoveImage.Size = New System.Drawing.Size(91, 23)
         Me.bRemoveImage.TabIndex = 13
@@ -108,7 +138,7 @@ Partial Class ShipImageDialog
         '
         'bAddImage
         '
-        Me.bAddImage.Location = New System.Drawing.Point(29, 244)
+        Me.bAddImage.Location = New System.Drawing.Point(39, 272)
         Me.bAddImage.Name = "bAddImage"
         Me.bAddImage.Size = New System.Drawing.Size(75, 23)
         Me.bAddImage.TabIndex = 12
@@ -134,9 +164,13 @@ Partial Class ShipImageDialog
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.ClassesTableAdapter = Nothing
         Me.TableAdapterManager.ShipImagesTableAdapter = Me.ShipImagesTableAdapter
-        Me.TableAdapterManager.ShipsTableAdapter = Nothing
+        Me.TableAdapterManager.ShipsTableAdapter = Me.ShipsTableAdapter
         Me.TableAdapterManager.ShowsTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SpaceshipDB.SpaceshipDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'ShipsTableAdapter
+        '
+        Me.ShipsTableAdapter.ClearBeforeFill = True
         '
         'ShipImagesBindingNavigator
         '
@@ -152,9 +186,34 @@ Partial Class ShipImageDialog
         Me.ShipImagesBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.ShipImagesBindingNavigator.Name = "ShipImagesBindingNavigator"
         Me.ShipImagesBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ShipImagesBindingNavigator.Size = New System.Drawing.Size(437, 25)
+        Me.ShipImagesBindingNavigator.Size = New System.Drawing.Size(562, 25)
         Me.ShipImagesBindingNavigator.TabIndex = 14
         Me.ShipImagesBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -188,17 +247,10 @@ Partial Class ShipImageDialog
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -206,7 +258,7 @@ Partial Class ShipImageDialog
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -215,92 +267,57 @@ Partial Class ShipImageDialog
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'ShipImagesBindingNavigatorSaveItem
         '
         Me.ShipImagesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.ShipImagesBindingNavigatorSaveItem.Image = CType(resources.GetObject("ShipImagesBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.ShipImagesBindingNavigatorSaveItem.Name = "ShipImagesBindingNavigatorSaveItem"
-        Me.ShipImagesBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.ShipImagesBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ShipImagesBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'ImageIDLabel
+        'ShipImagePictureBox
         '
-        ImageIDLabel.AutoSize = True
-        ImageIDLabel.Location = New System.Drawing.Point(29, 64)
-        ImageIDLabel.Name = "ImageIDLabel"
-        ImageIDLabel.Size = New System.Drawing.Size(53, 13)
-        ImageIDLabel.TabIndex = 14
-        ImageIDLabel.Text = "Image ID:"
+        Me.ShipImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.ShipImagesBindingSource, "ShipImage", True))
+        Me.ShipImagePictureBox.Location = New System.Drawing.Point(39, 108)
+        Me.ShipImagePictureBox.Name = "ShipImagePictureBox"
+        Me.ShipImagePictureBox.Size = New System.Drawing.Size(229, 146)
+        Me.ShipImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ShipImagePictureBox.TabIndex = 17
+        Me.ShipImagePictureBox.TabStop = False
         '
-        'ImageIDTextBox
+        'ImageDescriptionTextBox
         '
-        Me.ImageIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipImagesBindingSource, "ImageID", True))
-        Me.ImageIDTextBox.Location = New System.Drawing.Point(98, 61)
-        Me.ImageIDTextBox.Name = "ImageIDTextBox"
-        Me.ImageIDTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ImageIDTextBox.TabIndex = 15
+        Me.ImageDescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipImagesBindingSource, "ImageDescription", True))
+        Me.ImageDescriptionTextBox.Location = New System.Drawing.Point(286, 108)
+        Me.ImageDescriptionTextBox.Multiline = True
+        Me.ImageDescriptionTextBox.Name = "ImageDescriptionTextBox"
+        Me.ImageDescriptionTextBox.Size = New System.Drawing.Size(243, 146)
+        Me.ImageDescriptionTextBox.TabIndex = 19
         '
-        'ImageLabel
+        'ShipsBindingSource
         '
-        ImageLabel.AutoSize = True
-        ImageLabel.Location = New System.Drawing.Point(29, 87)
-        ImageLabel.Name = "ImageLabel"
-        ImageLabel.Size = New System.Drawing.Size(39, 13)
-        ImageLabel.TabIndex = 16
-        ImageLabel.Text = "Image:"
+        Me.ShipsBindingSource.DataMember = "FK__Ships__ImageID__6FE99F9F"
+        Me.ShipsBindingSource.DataSource = Me.ShipImagesBindingSource
         '
-        'ImagePictureBox
+        'ImageIDComboBox
         '
-        Me.ImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.ShipImagesBindingSource, "Image", True))
-        Me.ImagePictureBox.Location = New System.Drawing.Point(98, 87)
-        Me.ImagePictureBox.Name = "ImagePictureBox"
-        Me.ImagePictureBox.Size = New System.Drawing.Size(100, 50)
-        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ImagePictureBox.TabIndex = 17
-        Me.ImagePictureBox.TabStop = False
-        '
-        'DescriptionLabel
-        '
-        DescriptionLabel.AutoSize = True
-        DescriptionLabel.Location = New System.Drawing.Point(29, 146)
-        DescriptionLabel.Name = "DescriptionLabel"
-        DescriptionLabel.Size = New System.Drawing.Size(63, 13)
-        DescriptionLabel.TabIndex = 18
-        DescriptionLabel.Text = "Description:"
-        '
-        'DescriptionTextBox
-        '
-        Me.DescriptionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipImagesBindingSource, "Description", True))
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(98, 143)
-        Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.DescriptionTextBox.TabIndex = 19
+        Me.ImageIDComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ShipImagesBindingSource, "ImageID", True))
+        Me.ImageIDComboBox.DataSource = Me.ShipImagesBindingSource
+        Me.ImageIDComboBox.DisplayMember = "ImageID"
+        Me.ImageIDComboBox.FormattingEnabled = True
+        Me.ImageIDComboBox.Location = New System.Drawing.Point(137, 61)
+        Me.ImageIDComboBox.Name = "ImageIDComboBox"
+        Me.ImageIDComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.ImageIDComboBox.TabIndex = 21
+        Me.ImageIDComboBox.ValueMember = "ImageID"
         '
         'ShipImageDialog
         '
@@ -308,13 +325,13 @@ Partial Class ShipImageDialog
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(437, 456)
+        Me.ClientSize = New System.Drawing.Size(562, 329)
         Me.Controls.Add(ImageIDLabel)
-        Me.Controls.Add(Me.ImageIDTextBox)
-        Me.Controls.Add(ImageLabel)
-        Me.Controls.Add(Me.ImagePictureBox)
-        Me.Controls.Add(DescriptionLabel)
-        Me.Controls.Add(Me.DescriptionTextBox)
+        Me.Controls.Add(Me.ImageIDComboBox)
+        Me.Controls.Add(ShipImageLabel)
+        Me.Controls.Add(Me.ShipImagePictureBox)
+        Me.Controls.Add(ImageDescriptionLabel)
+        Me.Controls.Add(Me.ImageDescriptionTextBox)
         Me.Controls.Add(Me.ShipImagesBindingNavigator)
         Me.Controls.Add(Me.bRemoveImage)
         Me.Controls.Add(Me.bAddImage)
@@ -332,7 +349,8 @@ Partial Class ShipImageDialog
         CType(Me.ShipImagesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ShipImagesBindingNavigator.ResumeLayout(False)
         Me.ShipImagesBindingNavigator.PerformLayout()
-        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShipImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ShipsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -359,7 +377,9 @@ Partial Class ShipImageDialog
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents ShipImagesBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents ImageIDTextBox As TextBox
-    Friend WithEvents ImagePictureBox As PictureBox
-    Friend WithEvents DescriptionTextBox As TextBox
+    Friend WithEvents ShipsTableAdapter As SpaceshipDataSetTableAdapters.ShipsTableAdapter
+    Friend WithEvents ShipImagePictureBox As PictureBox
+    Friend WithEvents ImageDescriptionTextBox As TextBox
+    Friend WithEvents ShipsBindingSource As BindingSource
+    Friend WithEvents ImageIDComboBox As ComboBox
 End Class
