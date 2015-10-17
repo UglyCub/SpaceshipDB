@@ -31,6 +31,8 @@ Partial Class MainForm
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ByShowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ByClassToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.IndividuallyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,7 +41,7 @@ Partial Class MainForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msbShips, Me.msbClass, Me.msbImages, Me.msbShows, Me.PrintToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(616, 26)
+        Me.MenuStrip1.Size = New System.Drawing.Size(860, 26)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -81,7 +83,7 @@ Partial Class MainForm
         '
         'PrintToolStripMenuItem
         '
-        Me.PrintToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ByShowToolStripMenuItem, Me.ByClassToolStripMenuItem})
+        Me.PrintToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ByShowToolStripMenuItem, Me.ByClassToolStripMenuItem, Me.ToolStripMenuItem1, Me.IndividuallyToolStripMenuItem})
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
         Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(44, 22)
         Me.PrintToolStripMenuItem.Text = "Print"
@@ -89,20 +91,31 @@ Partial Class MainForm
         'ByShowToolStripMenuItem
         '
         Me.ByShowToolStripMenuItem.Name = "ByShowToolStripMenuItem"
-        Me.ByShowToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ByShowToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ByShowToolStripMenuItem.Text = "By Show"
         '
         'ByClassToolStripMenuItem
         '
         Me.ByClassToolStripMenuItem.Name = "ByClassToolStripMenuItem"
-        Me.ByClassToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ByClassToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ByClassToolStripMenuItem.Text = "By Class"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(132, 6)
+        '
+        'IndividuallyToolStripMenuItem
+        '
+        Me.IndividuallyToolStripMenuItem.Name = "IndividuallyToolStripMenuItem"
+        Me.IndividuallyToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.IndividuallyToolStripMenuItem.Text = "Individually"
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(616, 520)
+        Me.ClientSize = New System.Drawing.Size(860, 636)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
@@ -123,4 +136,6 @@ Partial Class MainForm
     Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ByShowToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ByClassToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
+    Friend WithEvents IndividuallyToolStripMenuItem As ToolStripMenuItem
 End Class

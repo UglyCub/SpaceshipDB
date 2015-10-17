@@ -5,7 +5,6 @@ C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\bin\Debug\SpaceshipDa
 C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\bin\Debug\SpaceshipDB.exe
 C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\bin\Debug\SpaceshipDB.pdb
 C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\bin\Debug\SpaceshipDB.xml
-C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\SpaceshipDB.vbprojResolveAssemblyReference.cache
 C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\SpaceshipDB.MainForm.resources
 C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\SpaceshipDB.Resources.resources
 C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\SpaceshipDB.vbproj.GenerateResource.Cache
@@ -64,3 +63,5 @@ E:\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\SpaceshipDB.vbproj.GenerateReso
 E:\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\RdlCompile.cache
 E:\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\RdlCompile.compiled
 E:\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\SpaceshipDB.PrintClassForm.resources
+C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\SpaceshipDB.PrintClassForm.resources
+C:\Users\jjbbi\Desktop\SpaceshipDB\SpaceshipDB\SpaceshipDB\obj\Debug\SpaceshipDB.PrintShipForm.resources

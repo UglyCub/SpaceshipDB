@@ -25,13 +25,22 @@
 
     Private Sub ByShowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ByShowToolStripMenuItem.Click
         Dim ps As New PrintShowForm
+        ps.MdiParent = Me
 
-        ps.ShowDialog()
+        ps.Show()
     End Sub
 
     Private Sub ByClassToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ByClassToolStripMenuItem.Click
         Dim pc As New PrintClassForm
+        pc.MdiParent = Me
 
-        pc.ShowDialog()
+        pc.Show()
+    End Sub
+
+    Private Sub IndividuallyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IndividuallyToolStripMenuItem.Click
+        Dim pi As New PrintShipForm
+        pi.MdiParent = Me
+
+        pi.Show()
     End Sub
 End Class

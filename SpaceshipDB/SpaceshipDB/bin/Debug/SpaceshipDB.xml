@@ -107,6 +107,131 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:SpaceshipDB.PrintShipDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ShipsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ShipImagesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ClassesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ShowsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ShipsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ShipImagesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ClassesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ShowsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ShipsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ShipImagesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ClassesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSet.ShowsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSetTableAdapters.ShipsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSetTableAdapters.ShipImagesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSetTableAdapters.ClassesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSetTableAdapters.ShowsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:SpaceshipDB.PrintShipDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SpaceshipDB.PrintShipDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:SpaceshipDB.PrintShipDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SpaceshipDB.PrintShipDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:SpaceshipDB.PrintShipDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SpaceshipDB.PrintShipDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:SpaceshipDB.PrintShipDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:SpaceshipDB.PrintShipDataSetTableAdapters.TableAdapterManager.UpdateAll(SpaceshipDB.PrintShipDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:SpaceshipDB.PrintShipDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:SpaceshipDB.PrintShowDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
