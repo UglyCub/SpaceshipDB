@@ -31,9 +31,14 @@ Public Class ShipDialog
     End Sub
 
     Private Sub ShipsBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs) Handles ShipsBindingNavigatorSaveItem.Click
-        Me.Validate()
-        Me.ShipsBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)
+        Try
+            Me.Validate()
+            Me.ShipsBindingSource.EndEdit()
+            Me.TableAdapterManager.UpdateAll(Me.SpaceshipDataSet)
+        Catch ex As Exception
+            MessageBox.Show("You most likely left something out. If not, check your fields.")
+        End Try
+
 
     End Sub
 End Class

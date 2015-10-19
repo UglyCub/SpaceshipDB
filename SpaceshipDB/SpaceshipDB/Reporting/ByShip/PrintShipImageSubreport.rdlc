@@ -11,7 +11,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.54024in</Height>
+              <Height>1.18607in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -32,8 +32,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>ImageDescription</rd:DefaultName>
-                          <Top>0.31944in</Top>
-                          <Left>2.83208in</Left>
+                          <Left>2.83209in</Left>
                           <Height>1.16648in</Height>
                           <Width>2.86583in</Width>
                           <Style>
@@ -51,7 +50,7 @@
                           <Value>=Fields!ShipImage.Value</Value>
                           <MIMEType>image/jpeg</MIMEType>
                           <Sizing>FitProportional</Sizing>
-                          <Top>0.31944in</Top>
+                          <Left>0.00001in</Left>
                           <Height>1.16648in</Height>
                           <Width>2.64583in</Width>
                           <ZIndex>1</ZIndex>
@@ -61,37 +60,6 @@
                             </Border>
                           </Style>
                         </Image>
-                        <Textbox Name="Textbox6">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Ship Image</Value>
-                                  <Style>
-                                    <FontSize>12pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Height>0.25in</Height>
-                          <Width>1in</Width>
-                          <ZIndex>2</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
                       </ReportItems>
                       <KeepTogether>true</KeepTogether>
                       <Style>
@@ -100,6 +68,7 @@
                         </Border>
                       </Style>
                     </Rectangle>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -114,12 +83,16 @@
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="Details" />
+              <Group Name="Details">
+                <PageBreak>
+                  <BreakLocation>Between</BreakLocation>
+                </PageBreak>
+              </Group>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>PrintShipImage</DataSetName>
-        <Height>1.54024in</Height>
+        <Height>1.18607in</Height>
         <Width>5.69792in</Width>
         <Style>
           <Border>
@@ -128,7 +101,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.59232in</Height>
+    <Height>1.18607in</Height>
     <Style />
   </Body>
   <Width>5.76042in</Width>
